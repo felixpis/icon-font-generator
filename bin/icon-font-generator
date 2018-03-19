@@ -39,7 +39,8 @@ function init() {
     descent            : args.descent,
     fixedWidth         : args.mono,
     fontHeight         : args.height,
-    centerHorizontally : args.center
+    centerHorizontally : args.center,
+    startCodepoint     : args.startCodepoint
   }
   const calledEmpty = Object.keys(args).length === 1 && args._.length === 0
   const formats = [ 'html', 'css', 'json' ]
@@ -112,7 +113,8 @@ function showHelp() {
     '  --descent        '.bold + 'Offset applied to the baseline (Default: 0)\n' +
     '  --mono           '.bold + 'Make font monospace (Default: false)\n' +
     '  --height         '.bold + 'Fixed font height value\n' +
-    '  --center         '.bold + 'Center font horizontally'
+    '  --center         '.bold + 'Center font horizontally\n' +
+    '  --startCodepoint '.bold + 'Starting codepoint (Default: 0xF101)'
   )
 }
 
